@@ -1,5 +1,8 @@
+import string
+
 inputFile = file("tom_sawyer.txt").read()
 words = dict()
+inputFile = inputFile.translate(None, string.punctuation)
 frequencies = list()
 wordCount = 0
 for word in inputFile.split():
